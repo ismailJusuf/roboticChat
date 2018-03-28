@@ -1,4 +1,4 @@
-package com.happycoderz.todolistfirebasesample;
+package com.happycoderz.todolistfirebasesample.Models;
 
 /**
  * Created by EminAyar on 28.03.2018.

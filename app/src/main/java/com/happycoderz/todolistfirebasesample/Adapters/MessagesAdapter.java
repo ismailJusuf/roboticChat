@@ -1,4 +1,4 @@
-package com.happycoderz.todolistfirebasesample;
+package com.happycoderz.todolistfirebasesample.Adapters;
 
 import android.app.Activity;
 import android.support.annotation.NonNull;
@@ -7,6 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
+import com.happycoderz.todolistfirebasesample.Models.Message;
+import com.happycoderz.todolistfirebasesample.R;
 
 import java.util.ArrayList;
 
@@ -51,7 +54,7 @@ public class MessagesAdapter extends ArrayAdapter<Message> {
         }
     }
 
-    public  void addMessage (Message msg) {
+    public void addMessage (Message msg) {
 
         add(msg);
         notifyDataSetChanged();

@@ -1,11 +1,9 @@
 package com.happycoderz.todolistfirebasesample.login;
 
 import android.app.Activity;
-import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
-import android.util.Log;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -14,15 +12,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.happycoderz.todolistfirebasesample.User;
+import com.happycoderz.todolistfirebasesample.Models.User;
+import com.happycoderz.todolistfirebasesample.main.MainActivity;
 
-import org.w3c.dom.Text;
-
-/**
- * Created by EminAyar on 28.03.2018.
- */
-
-public class LoginPresenter implements LoginContract.Presenter  {
+public class    LoginPresenter implements LoginContract.Presenter  {
 
     private FirebaseAuth firebaseAuth;
     private Activity context;
@@ -76,6 +69,7 @@ public class LoginPresenter implements LoginContract.Presenter  {
                     }
                 });
     }
+
 
     private void saveUserToFirebase(FirebaseUser user) {
         FirebaseDatabase database = FirebaseDatabase.getInstance();

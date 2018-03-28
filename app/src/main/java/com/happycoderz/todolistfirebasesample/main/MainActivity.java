@@ -5,10 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import com.happycoderz.todolistfirebasesample.Message;
-import com.happycoderz.todolistfirebasesample.MessagesAdapter;
+import com.happycoderz.todolistfirebasesample.Models.Message;
+import com.happycoderz.todolistfirebasesample.Adapters.MessagesAdapter;
 import com.happycoderz.todolistfirebasesample.R;
 
 import butterknife.BindView;

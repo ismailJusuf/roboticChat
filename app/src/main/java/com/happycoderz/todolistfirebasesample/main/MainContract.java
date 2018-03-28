@@ -1,9 +1,6 @@
 package com.happycoderz.todolistfirebasesample.main;
 
-import com.happycoderz.todolistfirebasesample.Message;
-import com.happycoderz.todolistfirebasesample.User;
-
-import java.util.ArrayList;
+import com.happycoderz.todolistfirebasesample.Models.Message;
 
 /**
  * Created by EminAyar on 28.03.2018.

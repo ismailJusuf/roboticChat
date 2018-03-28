@@ -1,9 +1,5 @@
 package com.happycoderz.todolistfirebasesample.login;
 
-/**
- * Created by EminAyar on 28.03.2018.
- */
-
 public class LoginContract {
 
     public interface Presenter {
@@ -11,6 +7,8 @@ public class LoginContract {
         void onLoginButtonClicked (String email, String password);
 
         void onSignupButtonClicked (String email, String password);
+
+        //void checkLoginStatus ();
 
     }
 

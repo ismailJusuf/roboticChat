@@ -11,6 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.happycoderz.todolistfirebasesample.Models.User;
 import com.happycoderz.todolistfirebasesample.R;
 import com.happycoderz.todolistfirebasesample.main.MainActivity;
 
@@ -21,6 +24,7 @@ import butterknife.OnClick;
 public class LoginActivity extends AppCompatActivity implements LoginContract.LoginView {
 
     LoginPresenter presenter;
+    FirebaseAuth firebaseAuth;
 
     @BindView(R.id.email_et)
     public EditText emailET;
@@ -35,6 +39,8 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Lo
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        firebaseAuth = FirebaseAuth.getInstance();
 
         ButterKnife.bind(this);
 
@@ -70,5 +76,16 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Lo
     @Override
     public void onError(String errorMessage) {
         Toast.makeText(this, errorMessage, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+        if (user != null ) {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
     }
 }
